@@ -17,6 +17,12 @@ class Player(models.Model):
     def __str__(self):
         return self.name + ", " + self.position
 
+    def validate_position(self):
+        self.position = self.position.upper()
+        if self.position != 'QB' or self.position != 'RB' or self.position != 'WR' or self.position != 'TE' or self.position != 'DST' or self.position != 'K':
+            return False
+        return True
+
 
 class PlayerWeek(models.Model):
     player = models.ForeignKey(Player, on_delete=models.PROTECT)
@@ -49,9 +55,15 @@ class Lineup(models.Model):
     b6 = models.ForeignKey(PlayerWeek, related_name="b6", on_delete=models.CASCADE)
     ir = models.ForeignKey(PlayerWeek, related_name="ir", on_delete=models.CASCADE)
 
-
     def __str__(self):
         return self.team.name + ", " + self.year + ", " + self.week 
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            if self.qb.position != "QB":
+                raise ValueError("Not a QB in the QB position")
+
+        super().save(*args, **kwargs)
 
 class Matchup(models.Model):
     winner = models.ForeignKey(Lineup, related_name="winner", on_delete=models.CASCADE)
