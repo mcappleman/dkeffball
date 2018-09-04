@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Player(models.Model):
     name = models.CharField(max_length=200)
@@ -9,7 +10,7 @@ class Player(models.Model):
 
     def valid_position(self):
         self.position = self.position.upper()
-        if self.position != 'QB' or self.position != 'RB' or self.position != 'WR' or self.position != 'TE' or self.position != 'DST' or self.position != 'K':
+        if self.position != 'QB' and self.position != 'RB' and self.position != 'WR' and self.position != 'TE' and self.position != 'DST' and self.position != 'K':
             return False
         return True
 
@@ -24,5 +25,13 @@ class PlayerWeek(models.Model):
         return self.player + ", " + self.year + ", " + self.week + ", " + self.points
 
     def valid_week(self):
+        if self.week < 1 or self.week > 16:
+            return False
+        return True
+
+
+    def valid_year(self):
+        if self.year < 2010 or self.year > timezone.now().year:
+            return False
         return True
     
