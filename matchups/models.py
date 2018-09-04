@@ -1,6 +1,6 @@
 from django.db import models
 
-from teams import Lineup
+from teams.models import Lineup
 
 class Matchup(models.Model):
     winner = models.ForeignKey(Lineup, related_name="winner", on_delete=models.CASCADE)

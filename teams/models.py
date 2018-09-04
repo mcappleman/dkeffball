@@ -1,6 +1,6 @@
 from django.db import models
 
-from players import PlayerWeek
+from players.models import PlayerWeek
 
 class Team(models.Model):
     name = models.CharField(max_length=200)
