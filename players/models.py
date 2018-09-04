@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
 
+from teams.models import Lineup, LineupPosition
+
+
 class Player(models.Model):
     name = models.CharField(max_length=200)
     position = models.CharField(max_length=4)
@@ -25,8 +28,10 @@ class Player(models.Model):
 
 
 class PlayerWeek(models.Model):
+    lineup = models.ForeignKey(Lineup, on_delete=models.PROTECT, default=None, blank=True, null=True)
     player = models.ForeignKey(Player, on_delete=models.PROTECT)
-    year = models.IntegerField(default=1999)
+    lineup_position = models.ForeignKey(LineupPosition, on_delete=models.PROTECT, default=None, blank=True, null=True)
+    year = models.IntegerField(default=timezone.now().year)
     week = models.IntegerField(default=0)
     points = models.FloatField(default=0)
 
