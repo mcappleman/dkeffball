@@ -28,9 +28,9 @@ class Player(models.Model):
 
 
 class PlayerWeek(models.Model):
-    lineup = models.ForeignKey(Lineup, on_delete=models.PROTECT, default=None, blank=True, null=True)
+    lineup = models.ForeignKey(Lineup, on_delete=models.PROTECT)
     player = models.ForeignKey(Player, on_delete=models.PROTECT)
-    lineup_position = models.ForeignKey(LineupPosition, on_delete=models.PROTECT, default=None, blank=True, null=True)
+    lineup_position = models.ForeignKey(LineupPosition, on_delete=models.PROTECT)
     year = models.IntegerField(default=timezone.now().year)
     week = models.IntegerField(default=0)
     points = models.FloatField(default=0)

@@ -4,6 +4,7 @@ from django.test import TestCase
 from django.utils import timezone
 
 from .models import Player, PlayerWeek
+from teams.models import Lineup, LineupPosition, Team
 
 class PlayerModelTests(TestCase):
     def test_valid_position_with_correct_position(self):
@@ -27,6 +28,21 @@ def create_player(name, position):
     Create player for PlayerWeek test cases
     """
     return Player.objects.create(name=name, position=position)
+
+
+def create_lineup(year, week, points):
+    """
+    Create a lineup for test cases
+    """
+    team = Team.objects.create(name='Test', wins=1, losses=0, ties=0)
+    return Lineup.objects.create(team=team, year=year, week=week, points=points)
+
+
+def create_lineup_position(name):
+    """
+    Create a lineup position for test cases
+    """
+    return LineupPosition.objects.create(name=name)
 
 
 class PlayerWeekModelTests(TestCase):
