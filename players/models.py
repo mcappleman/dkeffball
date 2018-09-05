@@ -40,6 +40,21 @@ class PlayerWeek(models.Model):
         return self.player.name + ", " + str(self.year) + ", " + str(self.week) + ", " + str(self.points)
 
 
+    def save(self, *args, **kwargs):
+        if self.week == 0:
+            self.week = self.lineup.week
+
+        if not self.valid_week():
+            self.week = self.lineup.week
+            if not self.valid_week():
+                raise ValueError('Invalid Week was passed to the PlayerWeek Model')
+
+        if not self.valid_year():
+            raise ValueError('Invalid Year was passed to the PlayerWeek Model')
+
+        super().save(*args, **kwargs)
+
+
     def valid_week(self):
         if self.week < 1 or self.week > 16:
             return False
