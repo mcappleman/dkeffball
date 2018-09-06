@@ -16,7 +16,17 @@ class PlayerWeekInline(admin.TabularInline):
 
 
 class LineupAdmin(admin.ModelAdmin):
+    list_display = ('team_name', 'week', 'year')
+    list_filter = ['team__name', 'week', 'year']
+    search_fields = ['team__name']
+
     inlines = [PlayerWeekInline]
+
+    def team_name(self, obj):
+        return obj.team.name
+
+
+    team_name.admin_order_field = 'team__name'
 
 
 admin.site.register(Team)

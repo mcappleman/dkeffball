@@ -3,6 +3,17 @@ from django.utils import timezone
 
 from teams.models import Lineup, LineupPosition
 
+MAX_LINEUP = {
+    'QB': 1,
+    'WR': 2,
+    'RB': 2,
+    'TE': 1,
+    'FLEX': 1,
+    'DST': 1,
+    'K': 1,
+    'BEN': 6,
+    'IR': 1,
+}
 
 class Player(models.Model):
     name = models.CharField(max_length=200)
@@ -52,17 +63,35 @@ class PlayerWeek(models.Model):
         if not self.valid_year():
             raise ValueError('Invalid Year was passed to the PlayerWeek Model')
 
+        if not self.valid_lineup_position():
+            raise ValueError('Invalid lineup position for ' + self.player.name + '. The lineup position ' + self.lineup_position.name + ' already has the max number.')
+
         super().save(*args, **kwargs)
 
 
     def valid_week(self):
         if self.week < 1 or self.week > 16:
             return False
+
+        if self.week != self.lineup.week:
+            return False
+
         return True
 
 
     def valid_year(self):
         if self.year < 2010 or self.year > timezone.now().year:
             return False
+
+        if self.year != self.lineup.year:
+            return False
+
         return True
-    
+
+
+    def valid_lineup_position(self):
+        list_same_lineup_position = PlayerWeek.objects.filter(lineup=self.lineup, lineup_position=self.lineup_position)
+        if len(list_same_lineup_position)+1 > MAX_LINEUP[self.lineup_position.name]:
+            return False
+        return True
+

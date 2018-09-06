@@ -51,7 +51,8 @@ class PlayerWeekModelTests(TestCase):
         valid_week() returns True for a valid week
         """
         player = create_player('Joe Montana', 'QB')    
-        pw = PlayerWeek(player=player, week=1, year=2018, points=15)
+        lineup = create_lineup(2018, 1, 105)
+        pw = PlayerWeek(lineup=lineup, player=player, week=1, year=2018, points=15)
         self.assertIs(pw.valid_week(), True)
 
 
@@ -78,7 +79,8 @@ class PlayerWeekModelTests(TestCase):
         valid_year() returns True for a year that is valid
         """
         player = create_player('Joe Montana', 'QB')
-        pw = PlayerWeek(player=player, week=1, year=2018, points=15)
+        lineup = create_lineup(2018, 1, 105)
+        pw = PlayerWeek(lineup=lineup, player=player, week=1, year=2018, points=15)
         self.assertIs(pw.valid_year(), True)
 
 
@@ -99,4 +101,67 @@ class PlayerWeekModelTests(TestCase):
         player = create_player('Joe Montana', 'QB')
         pw = PlayerWeek(player=player, week=1, year=1999, points=15)
         self.assertIs(pw.valid_year(), False)
+
+
+    def test_valid_lineup_position_qb_positive(self):
+        """
+        valid_lineup_position() returns True for a single QB
+        """
+        qb = create_player('Joe Montana', 'QB')
+        lineup = create_lineup(year=timezone.now().year, week=1, points=92)
+        lp = create_lineup_position('QB')
+        pw = PlayerWeek(lineup=lineup, player=qb, lineup_position=lp, week=1, year=timezone.now().year, points=12.5)
+        self.assertIs(pw.valid_lineup_position(), True)
+
+
+    def test_valid_lineup_position_qb_more_than_1(self):
+        """
+        valid_lineup_position() returns False for a lineup with a QB already
+        """
+        qb = create_player('Joe Montana', 'QB')
+        qb2 = create_player('Steve Young', 'QB')
+        lineup = create_lineup(year=timezone.now().year, week=1, points=92)
+        lp = create_lineup_position('QB')
+        PlayerWeek.objects.create(lineup=lineup, player=qb, lineup_position=lp, week=1, year=timezone.now().year, points=10)
+        pw = PlayerWeek(lineup=lineup, player=qb2, lineup_position=lp, week=1, year=timezone.now().year, points=12.5)
+        self.assertIs(pw.valid_lineup_position(), False)
+
+
+    def test_valid_lineup_position_rb_1(self):
+        """
+        valid_lineup_position() returns True for a single RB
+        """
+        rb = create_player('Joe Montana', 'RB')
+        lineup = create_lineup(year=timezone.now().year, week=1, points=92)
+        lp = create_lineup_position('RB')
+        pw = PlayerWeek(lineup=lineup, player=rb, lineup_position=lp, week=1, year=timezone.now().year, points=12.5)
+        self.assertIs(pw.valid_lineup_position(), True)
+
+
+    def test_valid_lineup_position_rb_2(self):
+        """
+        valid_lineup_position() returns True for a lineup with a RB already
+        """
+        rb = create_player('Joe Montana', 'RB')
+        rb2 = create_player('Steve Young', 'RB')
+        lineup = create_lineup(year=timezone.now().year, week=1, points=92)
+        lp = create_lineup_position('RB')
+        PlayerWeek.objects.create(lineup=lineup, player=rb, lineup_position=lp, week=1, year=timezone.now().year, points=10)
+        pw = PlayerWeek(lineup=lineup, player=rb2, lineup_position=lp, week=1, year=timezone.now().year, points=12.5)
+        self.assertIs(pw.valid_lineup_position(), True)
+
+
+    def test_valid_lineup_position_rb_more_than_2(self):
+        """
+        valid_lineup_position() returns False for a lineup with 2 RBs already
+        """
+        rb = create_player('Joe Montana', 'RB')
+        rb2 = create_player('Steve Young', 'RB')
+        rb3 = create_player('Emmitt Smith', 'RB')
+        lineup = create_lineup(year=timezone.now().year, week=1, points=92)
+        lp = create_lineup_position('RB')
+        PlayerWeek.objects.create(lineup=lineup, player=rb, lineup_position=lp, week=1, year=timezone.now().year, points=10)
+        PlayerWeek.objects.create(lineup=lineup, player=rb3, lineup_position=lp, week=1, year=timezone.now().year, points=10)
+        pw = PlayerWeek(lineup=lineup, player=rb2, lineup_position=lp, week=1, year=timezone.now().year, points=12.5)
+        self.assertIs(pw.valid_lineup_position(), False)
 
