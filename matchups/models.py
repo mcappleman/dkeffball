@@ -12,7 +12,7 @@ class Matchup(models.Model):
 
 
     def save(self, *args, **kwargs):
-        if not valid_lineups:
+        if not self.valid_lineups:
             raise ValueError('Lineups must be the same week and year')
 
         if not self.pk:
