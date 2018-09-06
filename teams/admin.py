@@ -9,6 +9,8 @@ class PlayerWeekInline(admin.TabularInline):
     model = PlayerWeek
     extra = 15
 
+    fields = ('player', 'lineup_position', 'points')
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'player':
             kwargs["queryset"] = Player.objects.order_by('position', 'name')

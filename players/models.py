@@ -52,6 +52,11 @@ class PlayerWeek(models.Model):
 
 
     def save(self, *args, **kwargs):
+        if not self.pk:
+            # Before create
+            self.week = self.lineup.week
+            self.year = self.lineup.year
+
         if self.week == 0:
             self.week = self.lineup.week
 
