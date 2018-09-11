@@ -8,7 +8,7 @@ class Matchup(models.Model):
     loser = models.ForeignKey(Lineup, related_name="loser", on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.year) + ", " + str(self.week) + ", " + self.winner.team.name + ", " + self.loser.team.name
+        return str(self.winner.year) + ", " + str(self.winner.week) + ", " + self.winner.team.name + ", " + self.loser.team.name
 
 
     def save(self, *args, **kwargs):

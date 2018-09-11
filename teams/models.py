@@ -44,7 +44,7 @@ class Lineup(models.Model):
     team = models.ForeignKey(Team, on_delete=models.PROTECT)
     year = models.IntegerField(default=timezone.now().year)
     week = models.IntegerField(default=0)
-    points = models.IntegerField(default=0)
+    points = models.FloatField(default=0)
 
     def __str__(self):
         return self.team.name + ", " + str(self.year) + ", " + str(self.week)

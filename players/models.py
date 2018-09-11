@@ -96,7 +96,11 @@ class PlayerWeek(models.Model):
 
     def valid_lineup_position(self):
         list_same_lineup_position = PlayerWeek.objects.filter(lineup=self.lineup, lineup_position=self.lineup_position)
-        if len(list_same_lineup_position)+1 > MAX_LINEUP[self.lineup_position.name]:
+        if not self.pk:
+            if len(list_same_lineup_position)+1 > MAX_LINEUP[self.lineup_position.name]:
+                return False
+
+        if len(list_same_lineup_position) > MAX_LINEUP[self.lineup_position.name]:
             return False
         return True
 
