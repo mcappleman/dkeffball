@@ -20,7 +20,7 @@ admin.site.site_header = 'DKE Fantasy Football Admin'
 admin.site.site_title = 'DKE Fantasy Football'
 
 urlpatterns = [
+    path('', include('home.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]

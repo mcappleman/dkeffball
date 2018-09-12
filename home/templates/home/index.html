@@ -1,0 +1,24 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+    {{section.title}}
+{% endblock title %}
+
+{% block content %}
+    <!-- This is taken straight from https://getbootstrap.com/docs/3.3/components/#jumbotron -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>DKE Fantasy Football</h1>
+            <p class="lead">Welcome to the website for the greatest fantasy football league that there ever was.</p>
+        </div>
+    </div>
+    
+
+    <!-- Body content -->
+    <div class="container body-content">
+
+
+        {% include "footer.html" %}
+    </div>
+
+{% endblock content %}

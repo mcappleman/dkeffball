@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import Matchup
+from teams.models import Lineup
 
 class MatchupAdmin(admin.ModelAdmin):
     list_display = ('winner_year', 'winner_week', 'winner_name', 'loser_name')
@@ -21,6 +22,13 @@ class MatchupAdmin(admin.ModelAdmin):
 
     def winner_year(self, obj):
         return obj.winner.year
+
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'winner' or db_field.name == 'loser':
+            kwargs["queryset"] = Lineup.objects.order_by('year', 'week', 'team__name')
+
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
 
 admin.site.register(Matchup, MatchupAdmin)

@@ -8,7 +8,7 @@ from players.models import Player, PlayerWeek
 
 class PlayerWeekInline(admin.TabularInline):
     model = PlayerWeek
-    extra = 15
+    extra = 1
 
     fields = ('player', 'lineup_position', 'points')
 
@@ -20,7 +20,7 @@ class PlayerWeekInline(admin.TabularInline):
 
 
 class LineupAdmin(admin.ModelAdmin):
-    list_display = ('team_name', 'week', 'year')
+    list_display = ('team_name', 'points', 'week', 'year')
     list_filter = ['team__name', 'week', 'year']
     search_fields = ['team__name']
 
