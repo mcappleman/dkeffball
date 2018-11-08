@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-from teams.models import Lineup, LineupPosition
+from teams.models import Lineup, LineupPosition, NFLTeam
 
 MAX_LINEUP = {
     'QB': 1,
@@ -18,6 +18,7 @@ MAX_LINEUP = {
 class Player(models.Model):
     name = models.CharField(max_length=200)
     position = models.CharField(max_length=4)
+    active = models.BooleanField(default=True)
 
 
     def __str__(self):
@@ -45,6 +46,7 @@ class PlayerWeek(models.Model):
     year = models.IntegerField(default=timezone.now().year)
     week = models.IntegerField(default=0)
     points = models.FloatField(default=0)
+    nfl_team = models.ForeignKey(NFLTeam, on_delete=models.PROTECT, null=True, blank=True)
 
 
     def __str__(self):
