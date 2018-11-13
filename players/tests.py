@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.utils import timezone
 
 from .models import Player, PlayerWeek
-from teams.models import Lineup, LineupPosition, Team
+from teams.models import Lineup, LineupPosition, Team, NFLTeam
 
 class PlayerModelTests(TestCase):
     def test_valid_position_with_correct_position(self):
@@ -23,11 +23,31 @@ class PlayerModelTests(TestCase):
         self.assertIs(player.valid_position(), False)
 
 
+    def test_to_string_no_team(self):
+        player = Player(name="Eli Manning", position="K")
+        player_str = str(player)
+        self.assertIs(player_str=="Eli Manning, K", True)
+
+
+    def test_to_string_with_team(self):
+        nfl_team = create_nflteam("NYG", "NFC", "East")
+        player = Player(name="Eli Manning", position="K", current_team=nfl_team)
+        player_str = str(player)
+        self.assertIs(player_str=="Eli Manning, K, NYG", True)
+
+
 def create_player(name, position):
     """
     Create player for PlayerWeek test cases
     """
     return Player.objects.create(name=name, position=position)
+
+
+def create_nflteam(name, conference, division):
+    """
+    Create a NFL Team for test cases
+    """
+    return NFLTeam.objects.create(name=name, conference=conference, division=division)
 
 
 def create_lineup(year, week, points):

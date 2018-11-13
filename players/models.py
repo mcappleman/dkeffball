@@ -18,11 +18,15 @@ MAX_LINEUP = {
 class Player(models.Model):
     name = models.CharField(max_length=200)
     position = models.CharField(max_length=4)
+    current_team = models.ForeignKey(NFLTeam, on_delete=models.PROTECT, null=True, blank=True)
     active = models.BooleanField(default=True)
 
 
     def __str__(self):
-        return self.name + ", " + self.position
+        if self.current_team is not None:
+            return self.name + ", " + self.position + ", " + str(self.current_team)
+        else:
+            return self.name + ", " + self.position
 
 
     def valid_position(self):
