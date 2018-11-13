@@ -3,6 +3,11 @@ version: '3'
 services:
     db:
         image: postgres
+        environment:
+            POSTGRES_CONFIG_MAX_CONNECTIONS: 10
+            POSTGRES_CONFIG_shared_buffers: 512MB
+        volumes:
+            - db-data:/var/lib/postgresql/data
 
     web:
         build: .
@@ -14,3 +19,5 @@ services:
         depends_on:
             - db
 
+volumes:
+    db-data:
