@@ -5,13 +5,13 @@ services:
         image: postgres
         environment:
             POSTGRES_CONFIG_MAX_CONNECTIONS: 10
-            POSTGRES_CONFIG_shared_buffers: 512MB
+            POSTGRES_CONFIG_shared_buffers: "56MB"
         volumes:
             - db-data:/var/lib/postgresql/data
 
     web:
         build: .
-        command: python3 manage.py runserver 0.0.0.0:8000
+        command: gunicorn --bind :8000 mysite.wsgi:application
         volumes:
             - .:/code
         ports:
