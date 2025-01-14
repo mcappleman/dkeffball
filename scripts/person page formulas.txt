@@ -1,0 +1,7 @@
+=IF(Games!$C2=$A$1,Games!$A2,IF(Games!$E2=$A$1,Games!$A2,))
+=IF(Games!$C2=$A$1,Games!$B2,IF(Games!$E2=$A$1,Games!$B2,))
+=IF(Games!$C2=$A$1,Games!$E2,IF(Games!$E2=$A$1,Games!$C2,))
+=IF(Games!$C2=$A$1,Games!$D2,IF(Games!$E2=$A$1,Games!$F2,))
+=IF(Games!$C2=$A$1,Games!$F2,IF(Games!$E2=$A$1,Games!$D2,))
+=IF(Games!$G2=$A$1,Games!$I2,)
+=IF(Games!$H2=$A$1,Games!$J2,)

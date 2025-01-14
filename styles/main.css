@@ -1,0 +1,88 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.recap-title {
+  margin-bottom: 20px;
+}
+
+.nfl-comparison {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.nfl-comparison p.description {
+  padding-top: 15px;
+}
+
+.nfl-comparison img {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+.matchup iframe {
+  max-width: 100%;
+}
+
+.tab-pane {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+}
+
+button.navbar-toggle {
+  border-radius: 0px;
+}
+
+.table-container {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.table-container input.column-search {
+  min-width: 100px;
+}
+
+.table-container table.table {
+  margin: 0;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul.tab-nav {
+  list-style-type: none;
+}
+
+ul.tab-nav li {
+  float: left;
+  padding: 15px;
+}
+
+.pinned-message {
+  margin: 12px;
+}
+
+.pinned-message img,
+.pinned-message video {
+  width: 100%;
+}

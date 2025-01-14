@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKE Fantasy Football</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="../images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- OG tags for sharing via social media -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="Trades" />
+    <meta
+      property="og:image"
+      content="https://i.ytimg.com/vi/fpsIUzUepdo/maxresdefault.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://i.ytimg.com/vi/fpsIUzUepdo/maxresdefault.jpg"
+    />
+    <meta property="og:site_name" content="DKE Fantasy Football" />
+    <meta property="og:description" content="Trades, trades, trades" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:url"
+      content="http://www.dkeffball.com/trades/index.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1871637919516524" />
+    <!-- End of the og tags -->
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108694586-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108694586-1");
+    </script>
+
+    <!-- AdSense -->
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7783180728620328",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- End of AdSense -->
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/3/flatly/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../stats/index.html">Stats</a>
+            </li>
+            <li>
+              <a href="../draft/index.html">Draft Results</a>
+            </li>
+            <li class="active">
+              <a href="../trades/index.html">Trades</a>
+            </li>
+            <li>
+              <a href="../memories/index.html">Memories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container body-content">
+      <h1>Trades</h1>
+
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a
+              href="#activetrades"
+              aria-controls="activetrades"
+              role="tab"
+              data-toggle="tab"
+              >Active Trades</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="activetrades">
+            <div class="row">
+              <div class="col-xs-12 table-container">
+                <h3>Active Trades</h3>
+                <table
+                  class="table table-striped table-bordered table-responsive"
+                  id="activeTradeTable"
+                >
+                  <thead>
+                    <th>Year</th>
+                    <th>Team 1</th>
+                    <th>Receives (1)</th>
+                    <th>Team 2</th>
+                    <th>Receives (2)</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2024</td>
+                      <td>Sawyer</td>
+                      <td>Willis' 13th (2025)<br />Amon-Ra St. Brown</td>
+                      <td>Willis</td>
+                      <td>Sawyer's 6th (2025)</td>
+                    </tr>
+                    <tr>
+                      <td>2024</td>
+                      <td>Trevor</td>
+                      <td>
+                        Willis' 5th (2025)<br />Willis' 9th (2027)<br />TJ
+                        Hockenson
+                      </td>
+                      <td>Willis</td>
+                      <td>
+                        Trevor's 9th (2025)<br />
+                        Trevor's 9th (2027)<br />George Pickens
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2024</td>
+                      <td>Trevor</td>
+                      <td>
+                        Basil's 11th (2025)<br />Basil's 12th (2025)<br />Travis
+                        Etienne<br />Drake London<br />Diontae Johnson
+                      </td>
+                      <td>Basil</td>
+                      <td>
+                        Trevor's 3rd (2025)<br />Trevor's 5th (2025)<br />Tank
+                        Bigsby
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Jared</td>
+                      <td>Pick 3.07 (2023)<br />Pick 4.03</td>
+                      <td>Sam</td>
+                      <td>Pick 2.07 (2023)<br />Pick 7.04</td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Sam</td>
+                      <td>
+                        Basil's 3rd (2023)<br />Trevor's 1st (2024)<br />Willis'
+                        1st (2024)
+                      </td>
+                      <td>Trevor</td>
+                      <td>
+                        Trevor's 1st (2023)<br />Sam's 6th (2024)<br />Sam's 9th
+                        (2024)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Sam</td>
+                      <td>
+                        Trevor's 1st (2023)<br />Basil's 2nd (2023)<br />Basil's
+                        3rd (2024)<br />Alexander Mattison
+                      </td>
+                      <td>Basil</td>
+                      <td>
+                        Majors' 1st (2023)<br />Matt's 2nd (2023)<br />Sam's 7th
+                        (2024)<br />Travis Kelce
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Matt</td>
+                      <td>
+                        Jared's 1st (2023)<br />Jared's 14th (2023)<br />Jared's
+                        6th (2024)
+                      </td>
+                      <td>Jared</td>
+                      <td>
+                        Trevor's 2nd (2023)<br />Sam's 3rd (2023)<br />Matt's
+                        1st (2024)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Majors</td>
+                      <td>Hunter's 1st (2023)<br />Hunter's 2nd (2023)</td>
+                      <td>Hunter</td>
+                      <td>Sam's 1st (2023)<br />Majors' 2nd (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Majors</td>
+                      <td>
+                        Sawyer's 5th, (2023)<br />Matt's 15th, 15.03 (2023)
+                      </td>
+                      <td>Sawyer</td>
+                      <td>
+                        Dameon Pierce<br />Majors' 9th (2023)<br />Majors' 12,
+                        (2023)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Matt</td>
+                      <td>
+                        Deebo Samuel<br />Sam's 12th, 12.05 (2023)<br />Sam's
+                        14th, 14.05 (2023)<br />Sam's 2nd (2024)<br />Sam's 8th
+                        (2024)
+                      </td>
+                      <td>Sam</td>
+                      <td>
+                        Matt's 2nd, 2.10 (2023)<br />Sawyer's 6th, 6.11
+                        (2023)<br />Matt's 13th (2024)<br />Matt's 14th (2024)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2023</td>
+                      <td>Majors</td>
+                      <td>
+                        Sam's 1st (2023)<br />Matt's 4th (2023)<br />Sam's 5th
+                        (2023)
+                      </td>
+                      <td>Sam</td>
+                      <td>
+                        Josh Jacobs<br />Majors' 1st (2023)<br />Majors' 4th
+                        (2023)<br />Jared's 15th (2023)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Chaz</td>
+                      <td>T.J. Hockenson<br />Matt's 14th (2023)</td>
+                      <td>Matt</td>
+                      <td>Chaz's 4th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Trevor</td>
+                      <td>
+                        Jaylen Waddle<br />Willis' 8th (2023)<br />Willis' 1st
+                        (2024)<br />Willis' 6th (2025)<br />Willis' 5th (2026)
+                      </td>
+                      <td>Willis</td>
+                      <td>
+                        Lamar Jackson<br />Trevor's 4th (2023)<br />Trevor's 5th
+                        (2024)<br />Trevor's 1st (2025)<br />Trevor's 4th (2026)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Jared</td>
+                      <td>Majors' 13th (2023)</td>
+                      <td>Majors</td>
+                      <td>Jared's 15th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Sawyer</td>
+                      <td>Matt's 15th (2023)</td>
+                      <td>Matt</td>
+                      <td>Sawyer's 6th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Ean</td>
+                      <td>Kenneth Walker III<br />Jared's 5th (2023)</td>
+                      <td>Jared</td>
+                      <td>Tyreek Hill<br />Ean's 6th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Matt</td>
+                      <td>Rachaad White<br />Basil's 1st (2023)</td>
+                      <td>Basil</td>
+                      <td>Travis Etienne Jr.<br />Matt's 8th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Sam</td>
+                      <td>Melvin Gordon<br />Basil's 8th (2023)</td>
+                      <td>Basil</td>
+                      <td>Brandin Cooks<br />Sam's 6th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Matt</td>
+                      <td>Trevor's 2nd (2023)<br />Trevor's 3rd (2023)</td>
+                      <td>Trevor</td>
+                      <td>Matt's 6th (2023)<br />Matt's 11th (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Matt</td>
+                      <td>
+                        Javonte Williams<br />Garrett Wilson<br />Sam's 2nd
+                        (2023)<br />Sam's 3rd (2023)<br />Sam's 4th (2023)
+                      </td>
+                      <td>Sam</td>
+                      <td>
+                        Tee Higgins<br />D'Andre Swift<br />Matt's 4th (2023)<br />Matt's
+                        7th (2023)<br />Matt's 12th (2023)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2022</td>
+                      <td>Ross</td>
+                      <td>Chris Godwin<br />Majors' 8th (2023)</td>
+                      <td>Majors</td>
+                      <td>Dameon Pierce<br />Ross' 15 (2023)</td>
+                    </tr>
+                    <tr>
+                      <td>2019</td>
+                      <td>Trevor</td>
+                      <td>
+                        Saquon Barkley<br /><s>Basil's 3rd (2019)</s><br /><s
+                          >Basil's 3rd (2020)</s
+                        ><br /><s>Basil's 3rd (2021)</s><br />Basil's 3rd (2023)
+                      </td>
+                      <td>Basil</td>
+                      <td>
+                        <s>Trevor's 1st (2019)<br />Trevor's 2nd (2019)</s
+                        ><br /><s>Trevor's 15th (2020)</s><br /><s
+                          >Trevor's 1st (2021)</s
+                        ><br />Trevor's 1st (2023)
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <script
+            async
+            src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block; text-align: center"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-7783180728620328"
+            data-ad-slot="7208999358"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+
+      <hr />
+      <footer>
+        <p>&copy; <span id="currentYear"></span> - DKE Fantasy Football</p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/trades.js"></script>
+    <script>
+      var now = new Date();
+      $("#currentYear").text(now.getFullYear());
+    </script>
+  </body>
+</html>

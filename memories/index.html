@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKE Fantasy Football</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="../images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- OG tags for sharing via social media -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="Memories" />
+    <meta
+      property="og:image"
+      content="https://i.ytimg.com/vi/fpsIUzUepdo/maxresdefault.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://i.ytimg.com/vi/fpsIUzUepdo/maxresdefault.jpg"
+    />
+    <meta property="og:site_name" content="DKE Fantasy Football" />
+    <meta property="og:description" content="Pinned memories" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:url"
+      content="http://www.dkeffball.com/memories/index.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1871637919516524" />
+    <!-- End of the og tags -->
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108694586-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108694586-1");
+    </script>
+
+    <!-- AdSense -->
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7783180728620328",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- End of AdSense -->
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/3/flatly/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../stats/index.html">Stats</a>
+            </li>
+            <li>
+              <a href="../draft/index.html">Draft Results</a>
+            </li>
+            <li>
+              <a href="../trades/index.html">Trades</a>
+            </li>
+            <li class="active">
+              <a href="../messages/index.html">Memories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container body-content">
+      <h1>Memories</h1>
+
+      <div class="row" id="messages-container"></div>
+      <div class="row">
+        <div class="col-xs-12">
+          <script
+            async
+            src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+          <ins
+            class="adsbygoogle"
+            style="display: block; text-align: center"
+            data-ad-layout="in-article"
+            data-ad-format="fluid"
+            data-ad-client="ca-pub-7783180728620328"
+            data-ad-slot="7208999358"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+
+      <hr />
+      <footer>
+        <p>&copy; <span id="currentYear"></span> - DKE Fantasy Football</p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script src="../scripts/pinned_messages.js"></script>
+    <script>
+      var now = new Date();
+      $("#currentYear").text(now.getFullYear());
+    </script>
+  </body>
+</html>

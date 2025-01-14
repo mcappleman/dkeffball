@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKE Fantasy Football</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="../images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- OG tags for sharing via social media -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="2019 Draft Results" />
+    <meta property="og:image" content="https://i.imgur.com/29RDyCR.jpg" />
+    <meta
+      property="og:image:secure_url"
+      content="https://i.imgur.com/29RDyCR.jpg"
+    />
+    <meta property="og:site_name" content="DKE Fantasy Football" />
+    <meta property="og:description" content="2019 Draft Results" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:url"
+      content="http://www.dkeffball.com/draft/2019draft.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1871637919516524" />
+    <!-- End of the og tags -->
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108694586-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108694586-1");
+    </script>
+
+    <!-- AdSense -->
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7783180728620328",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- End of AdSense -->
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/3/flatly/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../stats/index.html">Stats</a>
+            </li>
+            <li class="active">
+              <a href="../draft/index.html">Draft Results</a>
+            </li>
+            <li>
+              <a href="../trades/index.html">Trades</a>
+            </li>
+            <li>
+              <a href="../memories/index.html">Memories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container body-content">
+      <nav aria-label="breadcrumb" role="navigation">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="./index.html">Draft Results</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">2019</li>
+        </ol>
+      </nav>
+
+      <h1 class="recap-title">Draft Results 2019</h1>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active" role="presentation">
+              <a
+                href="#teams"
+                aria-controls="teams"
+                role="tab"
+                data-toggle="tab"
+                >Teams</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="#every"
+                aria-controls="every"
+                role="tab"
+                data-toggle="tab"
+                >Every Pick</a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="teams">
+              <ul class="page-navigation">
+                <ul class="tab-nav">
+                  <li>
+                    <a href="#BasilHead">Basil</a>
+                  </li>
+                  <li>
+                    <a href="#ChazHead">Chaz</a>
+                  </li>
+                  <li>
+                    <a href="#EanHead">Ean</a>
+                  </li>
+                  <li>
+                    <a href="#HunterHead">Hunter</a>
+                  </li>
+                  <li>
+                    <a href="#JaredHead">Jared</a>
+                  </li>
+                  <li>
+                    <a href="#MajorsHead">Majors</a>
+                  </li>
+                  <li>
+                    <a href="#MattHead">Matt</a>
+                  </li>
+                  <li>
+                    <a href="#RossHead">Ross</a>
+                  </li>
+                  <li>
+                    <a href="#SamHead">Sam</a>
+                  </li>
+                  <li>
+                    <a href="#SawyerHead">Sawyer</a>
+                  </li>
+                  <li>
+                    <a href="#TrevorHead">Trevor</a>
+                  </li>
+                  <li>
+                    <a href="#WillisHead">Willis</a>
+                  </li>
+                </ul>
+              </ul>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="BasilHead">Basil</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="basil"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="ChazHead">Chaz</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="chaz"
+                ></table>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="EanHead">Ean</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="ean"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="HunterHead">Hunter</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="hunter"
+                ></table>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="JaredHead">Jared</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="jared"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="MajorsHead">Majors</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="majors"
+                ></table>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="MattHead">Matt</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="matt"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="RossHead">Ross</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="ross"
+                ></table>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="SamHead">Sam</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="sam"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="SawyerHead">Sawyer</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="sawyer"
+                ></table>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="TrevorHead">Trevor</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="trevor"
+                ></table>
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <h2 id="WillisHead">Willis</h2>
+                <table
+                  class="table table-bordered table-striped table-responsive"
+                  id="willis"
+                ></table>
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="every">
+              <table
+                class="table table-striped table-bordered table-responsive"
+                id="everyPick2019"
+              >
+                <tfoot>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 comment-section">
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+            (function () {
+              // DON'T EDIT BELOW THIS LINE
+              var d = document,
+                s = d.createElement("script");
+              s.src = "https://dkeffball.disqus.com/embed.js";
+              s.setAttribute("data-timestamp", +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+              >comments powered by Disqus.</a
+            >
+          </noscript>
+        </div>
+      </div>
+
+      <hr />
+      <footer>
+        <p>&copy; <span id="currentYear"></span> - DKE Fantasy Football</p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script>
+      var now = new Date();
+      $("#currentYear").text(now.getFullYear());
+
+      $(document).ready(function () {
+        $("#basil").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: basilData,
+          columns: tableColumns,
+        });
+
+        $("#chaz").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: chazData,
+          columns: tableColumns,
+        });
+
+        $("#ean").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: eanData,
+          columns: tableColumns,
+        });
+
+        $("#hunter").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: hunterData,
+          columns: tableColumns,
+        });
+
+        $("#jared").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: jaredData,
+          columns: tableColumns,
+        });
+
+        $("#majors").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: majorsData,
+          columns: tableColumns,
+        });
+
+        $("#matt").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: mattData,
+          columns: tableColumns,
+        });
+
+        $("#ross").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: rossData,
+          columns: tableColumns,
+        });
+
+        $("#sam").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: samData,
+          columns: tableColumns,
+        });
+
+        $("#sawyer").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: sawyerData,
+          columns: tableColumns,
+        });
+
+        $("#trevor").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: trevorData,
+          columns: tableColumns,
+        });
+
+        $("#willis").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: willisData,
+          columns: tableColumns,
+        });
+
+        var table = $("#everyPick2019").DataTable({
+          order: [[0, "asc"]],
+          lengthMenu: [
+            [12, 24, -1],
+            ["12", "24", "All"],
+          ],
+          data: picks2019,
+          columns: picksColumns,
+        });
+
+        $("#everyPick2019 tfoot th").each(function (i) {
+          var title = $(this).text();
+          var htmlString =
+            '<input type="text" class="form-control column-search" placeholder="' +
+            picksColumns[i].title +
+            '" />';
+          $(this).html(htmlString);
+        });
+
+        // Apply the search
+        table.columns().every(function () {
+          var that = this;
+
+          $("input", this.footer()).on("keyup change", function () {
+            if (that.search() !== this.value) {
+              that.search(this.value).draw();
+            }
+          });
+        });
+
+        $("#everyPick2019_filter").addClass("hidden");
+      });
+
+      function filterTable(team, local_picks) {
+        var pickNum = 1;
+        var picks = [];
+        var team_index = 2;
+
+        for (var i = 0; i < local_picks.length; i++) {
+          if (local_picks[i][team_index] === team) {
+            var team_picks = [pickNum];
+            local_picks[i].forEach(function (value, index) {
+              if (index != team_index) team_picks.push(value);
+            });
+
+            picks.push(team_picks);
+            pickNum += 1;
+          }
+        }
+
+        return picks;
+      }
+
+      var tableColumns = [
+        { title: "Pick", orderable: true },
+        { title: "Overall", orderable: true },
+        { title: "Round", orderable: true },
+        { title: "Player", orderable: true },
+        { title: "Position", orderable: true },
+      ];
+
+      var picksColumns = [
+        { title: "Overall", orderable: true },
+        { title: "Round", orderable: true },
+        { title: "Team", orderable: true },
+        { title: "Player", orderable: true },
+        { title: "Position", orderable: true },
+      ];
+
+      var picks2019 = [
+        [1, 1, "Jared", "Mike Evans", "WR1"],
+        [2, 1, "Ean", "Josh Jacobs", "RB1"],
+        [3, 1, "Sawyer", "Stefon Diggs", "WR2"],
+        [4, 1, "Chaz", "Dalvin Cook (1st Year Keeper)", "RB2"],
+        [5, 1, "Ross", "Christian McCaffrey (1st Year Keeper)", "RB3"],
+        [6, 1, "Willis", "Mark Ingram", "RB4"],
+        [7, 1, "Sam", "Leonard Fournette", "RB5"],
+        [8, 1, "Hunter", "Joe Mixon (1st Year Keeper)", "RB6"],
+        [9, 1, "Majors", "Ezekial Elliot (2nd Year Keeper)", "RB7"],
+        [10, 1, "Trevor", "Saquon Barkley (1st Year Keeper)", "RB8"],
+        [11, 1, "Matt", "Todd Gurley (2nd Year Keeper)", "RB9"],
+        [12, 1, "Basil", "Melvin Gordon", "RB10"],
+        [13, 2, "Basil", "George Kittle", "TE1"],
+        [14, 2, "Matt", "Devonta Freeman", "RB11"],
+        [15, 2, "Basil", "TY Hilton", "WR3"],
+        [16, 2, "Majors", "Chris Godwin", "WR4"],
+        [17, 2, "Hunter", "Derrick Henry", "RB12"],
+        [18, 2, "Sam", "Marlon Mack", "RB13"],
+        [19, 2, "Willis", "Julio Jones (2nd Year Keeper)", "WR5"],
+        [20, 2, "Ross", "Zach Ertz", "TE2"],
+        [21, 2, "Chaz", "Keenan Allen (2nd Year Keeper)", "WR6"],
+        [22, 2, "Sawyer", "Juju Smith-Schuster (1st Year Keeper)", "WR7"],
+        [23, 2, "Ean", "Derrius Guice", "RB14"],
+        [24, 2, "Jared", "Robby Anderson", "WR8"],
+        [25, 3, "Jared", "Brandin Cooks (1st Year Keeper)", "WR9"],
+        [26, 3, "Ean", "Travis Kelce (2nd Year Keeper)", "TE3"],
+        [27, 3, "Sawyer", "Robert Woods", "WR10"],
+        [28, 3, "Chaz", "Kenny Golladay", "WR11"],
+        [29, 3, "Ross", "David Montgomery", "RB15"],
+        [30, 3, "Willis", "Alshon Jeffery", "WR12"],
+        [31, 3, "Sam", "Tyler Lockett", "WR13"],
+        [32, 3, "Hunter", "Allen Robinson", "WR14"],
+        [33, 3, "Majors", "Le'Veon Bell (2nd Year Keeper)", "RB16"],
+        [34, 3, "Trevor", "Dede Westbrook", "WR15"],
+        [35, 3, "Matt", "Devin Singletary", "RB17"],
+        [36, 3, "Trevor", "Duke Johnson Jr", "RB18"],
+        [37, 4, "Trevor", "OJ Howard", "TE4"],
+        [38, 4, "Matt", "Royce Freeman", "RB19"],
+        [39, 4, "Basil", "Tyler Boyd", "WR16"],
+        [40, 4, "Majors", "Mike Williams", "WR17"],
+        [41, 4, "Hunter", "Antonio Brown (2nd Year Keeper)", "WR18"],
+        [42, 4, "Sam", "Miles Sanders", "RB20"],
+        [43, 4, "Willis", "Tevin Coleman", "RB21"],
+        [44, 4, "Ross", "Julian Edelman", "WR19"],
+        [45, 4, "Chaz", "Kenyan Drake", "RB22"],
+        [46, 4, "Sawyer", "Austin Ekeler", "RB23"],
+        [47, 4, "Ean", "Sterling Shepard", "WR20"],
+        [48, 4, "Jared", "Sony Michel (3rd Round, 1st Year Keeper)", "RB24"],
+        [49, 5, "Jared", "Dion Lewis", "RB25"],
+        [50, 5, "Willis", "Matt Ryan", "QB1"],
+        [51, 5, "Sawyer", "Evan Engram", "TE5"],
+        [52, 5, "Chaz", "James White", "RB26"],
+        [53, 5, "Ross", "Christian Kirk", "WR21"],
+        [54, 5, "Willis", "Donte Moncrief", "WR22"],
+        [55, 5, "Sam", "Latavius Murray", "RB27"],
+        [56, 5, "Hunter", "Kerryon Johnson (1st Year Keeper)", "RB28"],
+        [57, 5, "Majors", "Hunter Henry", "TE6"],
+        [58, 5, "Basil", "Emmanuel Sanders", "WR23"],
+        [59, 5, "Matt", "Jarvis Landry", "WR24"],
+        [60, 5, "Trevor", "DJ Moore", "WR25"],
+        [61, 6, "Trevor", "Chris Carson (1st Year Keeper)", "RB29"],
+        [62, 6, "Sam", "AJ Green", "WR26"],
+        [63, 6, "Basil", "Matt Breida", "RB30"],
+        [64, 6, "Ross", "Aaron Rodgers", "QB2"],
+        [65, 6, "Hunter", "Will Fuller V", "WR27"],
+        [66, 6, "Trevor", "LeSean McCoy", "RB31"],
+        [67, 6, "Willis", "Nick Chubb (1st Year Keeper)", "RB32"],
+        [68, 6, "Ross", "Darrell Henderson", "RB33"],
+        [69, 6, "Chaz", "Tyrell Williams", "WR28"],
+        [70, 6, "Sawyer", "Sammy Watkins", "WR29"],
+        [71, 6, "Ean", "Peyton Barber", "RB34"],
+        [72, 6, "Jared", "Tony Pollard", "RB35"],
+        [73, 7, "Majors", "Jordan Howard", "RB36"],
+        [74, 7, "Ean", "Calvin Ridley (1st Year Keeper)", "WR30"],
+        [75, 7, "Sawyer", "Rashaad Penny", "RB37"],
+        [76, 7, "Chaz", "Jared Cook", "TE7"],
+        [77, 7, "Ross", "Curtis Samuel", "WR31"],
+        [78, 7, "Willis", "Tarik Cohen", "RB38"],
+        [79, 7, "Sam", "Vance McDonald", "TE8"],
+        [80, 7, "Hunter", "David Njoku", "TE9"],
+        [81, 7, "Majors", "Carson Wentz", "QB3"],
+        [82, 7, "Basil", "Cam Newton", "QB4"],
+        [83, 7, "Matt", "Dante Pettis", "WR32"],
+        [84, 7, "Trevor", "Lamar Jackson", "QB5"],
+        [85, 8, "Trevor", "Patrick Mahomes (1st Year Keeper)", "QB6"],
+        [86, 8, "Matt", "Aaron Jones (1st Year Keeper)", "RB39"],
+        [87, 8, "Basil", "Adam Thielen (2nd Year Keeper)", "WR33"],
+        [88, 8, "Majors", "Marvin Jones Jr", "WR34"],
+        [89, 8, "Hunter", "Russell Wilson", "QB7"],
+        [90, 8, "Sam", "Corey Davis", "WR35"],
+        [91, 8, "Willis", "Larry Fitzgerald", "WR36"],
+        [92, 8, "Ross", "Nyheim Hines", "RB40"],
+        [93, 8, "Chaz", "Michael Gallup", "WR37"],
+        [94, 8, "Sawyer", "Drew Brees", "QB8"],
+        [95, 8, "Ean", "Kyler Murray", "QB9"],
+        [96, 8, "Majors", "Delanie Walker", "TE10"],
+        [97, 9, "Jared", "Jared Goff", "QB10"],
+        [98, 9, "Ean", "Jaylen Samuels", "RB41"],
+        [99, 9, "Sawyer", "Courtland Sutton", "WR38"],
+        [100, 9, "Chaz", "Justin Jackson", "RB42"],
+        [101, 9, "Ross", "Ronald Jones", "RB43"],
+        [102, 9, "Willis", "Eric Ebron", "TE11"],
+        [103, 9, "Sam", "Kallen Ballage", "RB44"],
+        [104, 9, "Hunter", "Ito Smith", "RB45"],
+        [105, 9, "Majors", "Marques Valdes-Scantlin", "WR39"],
+        [106, 9, "Basil", "Tre'Quan Smith", "WR40"],
+        [107, 9, "Matt", "Dak Prescott", "QB11"],
+        [108, 9, "Trevor", "Baltimore D", "DST1"],
+        [109, 10, "Trevor", "DK Metcalf", "WR41"],
+        [110, 10, "Matt", "James Washington", "WR42"],
+        [111, 10, "Basil", "Tom Brady", "QB12"],
+        [112, 10, "Majors", "Ben Roethlisberger", "QB13"],
+        [113, 10, "Hunter", "John Brown", "WR43"],
+        [114, 10, "Sam", "Kareem Hunt", "RB46"],
+        [115, 10, "Willis", "Mecole Hardman", "WR44"],
+        [116, 10, "Ross", "Bears D", "DST2"],
+        [117, 10, "Chaz", "Philip Rivers", "QB14"],
+        [118, 10, "Sawyer", "Jacksonville D", "DST3"],
+        [119, 10, "Ean", "Jalen Richard", "RB47"],
+        [120, 10, "Jared", "Sam Darnold", "QB15"],
+        [121, 11, "Jared", "Jimmy Graham", "TE12"],
+        [122, 11, "Ean", "Darwin Thompson", "RB48"],
+        [123, 11, "Sawyer", "Ty Montgomery", "RB49"],
+        [124, 11, "Chaz", "Rams D", "DST4"],
+        [125, 11, "Ross", "Desean Jackson", "WR45"],
+        [126, 11, "Willis", "Greg Zuerlein", "K1"],
+        [127, 11, "Sam", "Harrison Butker", "K2"],
+        [128, 11, "Hunter", "Justin Tucker", "K3"],
+        [129, 11, "Majors", "Will Lutz", "K4"],
+        [130, 11, "Basil", "Ka'imi Fairbairn", "K5"],
+        [131, 11, "Matt", "Jameis Winston", "QB16"],
+        [132, 11, "Trevor", "Mark Andrews", "TE13"],
+        [133, 12, "Trevor", "Stephen Gostkowski", "K6"],
+        [134, 12, "Matt", "DeAndre Hopkins (2nd Year Keeper)", "WR46"],
+        [135, 12, "Basil", "Seattle D", "DST5"],
+        [136, 12, "Majors", "Minnesota D", "DST6"],
+        [137, 12, "Hunter", "Keke Coutee", "WR47"],
+        [
+          138,
+          12,
+          "Sam",
+          "Deshaun Watson (15th Round, 2nd Year Keeper)",
+          "QB17",
+        ],
+        [139, 12, "Willis", "Browns D", "DST7"],
+        [140, 12, "Ross", "Robbie Gould", "K7"],
+        [141, 12, "Chaz", "Michael Thomas (2nd Year Keeper)", "WR48"],
+        [142, 12, "Sawyer", "Michael Badgley", "K8"],
+        [143, 12, "Ean", "Adrian Peterson", "RB50"],
+        [144, 12, "Jared", "New England D", "DST8"],
+        [145, 13, "Jared", "Jake Elliot", "K9"],
+        [146, 13, "Ean", "Bills D", "DST9"],
+        [147, 13, "Sawyer", "Nelson Agholor", "WR49"],
+        [148, 13, "Chaz", "Matt Bryant", "K10"],
+        [
+          149,
+          13,
+          "Ross",
+          "Baker Mayfield (15th Round, 1st Year Keeper)",
+          "QB18",
+        ],
+        [150, 13, "Willis", "Austin Hooper", "TE14"],
+        [151, 13, "Sam", "Tyreek Hill (15th Round, 2nd Year Keeper)", "WR50"],
+        [152, 13, "Hunter", "Greg Olsen", "TE15"],
+        [
+          153,
+          13,
+          "Majors",
+          "Alvin Kamara (15th Round, 2nd Year Keeper)",
+          "RB51",
+        ],
+        [154, 13, "Basil", "Hunter Renfrow", "WR51"],
+        [155, 13, "Matt", "Jack Doyle", "TE16"],
+        [156, 13, "Trevor", "Kenny Stills", "WR52"],
+        [
+          157,
+          14,
+          "Trevor",
+          "Davante Adams (15th Round, 2nd Year Keeper)",
+          "WR53",
+        ],
+        [158, 14, "Matt", "Darren Waller", "TE17"],
+        [159, 14, "Basil", "Jordan Reed", "TE18"],
+        [160, 14, "Jared", "Houston D", "DST10"],
+        [161, 14, "Hunter", "Dallas D", "DST11"],
+        [
+          162,
+          14,
+          "Sam",
+          "Odell Beckham Jr (15th Round, 2nd Year Keeper)",
+          "WR54",
+        ],
+        [
+          163,
+          14,
+          "Willis",
+          "Philip Lindsay (15th Round, 1st Year Keeper)",
+          "RB52",
+        ],
+        [164, 14, "Ross", "Amari Cooper (15th Round, 1st Year Keeper)", "WR55"],
+        [165, 14, "Chaz", "Rob Gronkowski", "TE19"],
+        [
+          166,
+          14,
+          "Sawyer",
+          "James Conner (15th Round, 1st Year Keeper)",
+          "RB53",
+        ],
+        [167, 14, "Ean", "Matt Prater", "K11"],
+        [168, 14, "Jared", "Ryan Fitzpatrick", "QB19"],
+        [169, 15, "Jared", "Josh Gordon (2nd Year Keeper)", "WR56"],
+        [170, 15, "Ean", "Cooper Kupp (1st Year Keeper)", "WR57"],
+        [171, 15, "Sawyer", "David Johnson (2nd Year Keeper)", "RB54"],
+        [172, 15, "Chaz", "Kyle Rudolph", "TE20"],
+        [173, 15, "Majors", "Carlos Hyde", "RB55"],
+        [174, 15, "Ean", "Daniel Jones", "QB20"],
+        [175, 15, "Matt", "Broncos D", "DST12"],
+        [176, 15, "Hunter", "Mitchell Trubisky", "QB21"],
+        [177, 15, "Jared", "Jason Witten", "TE21"],
+        [178, 15, "Basil", "Damien Williams (1st Year Keeper)", "RB56"],
+        [179, 15, "Matt", "Brett Maher", "K12"],
+        [180, 15, "Sam", "Saints D", "DST13"],
+      ];
+
+      var basilData = filterTable("Basil", picks2019);
+      var chazData = filterTable("Chaz", picks2019);
+      var eanData = filterTable("Ean", picks2019);
+      var hunterData = filterTable("Hunter", picks2019);
+      var jaredData = filterTable("Jared", picks2019);
+      var majorsData = filterTable("Majors", picks2019);
+      var mattData = filterTable("Matt", picks2019);
+      var rossData = filterTable("Ross", picks2019);
+      var samData = filterTable("Sam", picks2019);
+      var sawyerData = filterTable("Sawyer", picks2019);
+      var trevorData = filterTable("Trevor", picks2019);
+      var willisData = filterTable("Willis", picks2019);
+    </script>
+
+    <script
+      id="dsq-count-scr"
+      src="//dkeffball.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+</html>

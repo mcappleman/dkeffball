@@ -1,0 +1,38 @@
+ + IFERROR(IF(
+        (
+            IFERROR(
+                FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=$B14),
+                FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=$B14)
+            )
+        )>(
+            IFERROR(
+                FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=C$13),
+                FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=C$13)
+            )
+        ), 1, IF(
+            (
+                IFERROR(
+                    FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=$B14),
+                    FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=$B14)
+                )
+            )=(
+                IFERROR(
+                    FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=C$13),
+                    FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=C$13)
+                )
+            ),
+            IF(
+                (
+                    IFERROR(
+                        FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=$B14),
+                        FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=$B14)
+                    )
+                )>(
+                    IFERROR(
+                        FILTER(Games!$D:$D,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$C:$C=C$13),
+                        FILTER(Games!$F:$F,Games!$A:$A=$B$1,Games!$B:$B=16,Games!$E:$E=C$13)
+                    )
+                ), 1, 0
+            ), 0
+        )
+    ),0)

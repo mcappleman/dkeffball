@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page that appears in the tab -->
+    <title>DKE Fantasy Football</title>
+
+    <!-- Sewanee S that appears in the tab header -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="./images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108694586-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108694586-1");
+    </script>
+
+    <!-- AdSense -->
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7783180728620328",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- End of AdSense -->
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/3/flatly/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar at the top of the page. All of this code is taken from https://getbootstrap.com/docs/3.3/components/#navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Menu Button that will appear in the mobile view -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Title of the application where when clicked goes to the home page -->
+          <a href="./index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <!-- All of the navbar items go here, this is what will collapse in the mobile view and appear in the menu button -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="./stats/index.html">Stats</a>
+            </li>
+            <li>
+              <a href="./draft/index.html">Draft Results</a>
+            </li>
+            <li>
+              <a href="./trades/index.html">Trades</a>
+            </li>
+            <li>
+              <a href="./messages/index.html">Memories</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End of the navbar items -->
+      </div>
+    </div>
+    <!-- End of the navbar -->
+
+    <!-- This is taken straight from https://getbootstrap.com/docs/3.3/components/#jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>DKE Fantasy Football</h1>
+        <p class="lead">
+          Welcome to the website for the greatest fantasy football league that
+          there ever was.
+        </p>
+        <br />
+      </div>
+    </div>
+
+    <!-- Body content -->
+    <div class="container body-content">
+      <!-- This is how bootstraps grid system works. Check out this for more information, https://getbootstrap.com/docs/3.3/css/#grid -->
+      <!-- Essentially the grid system helps to lay out items on the page, and it is broken down into rows and columns, where each row is 12 columns wide. -->
+      <div class="row">
+        <!-- Example of a column that is a third of the page for anything bigger than a tablet view. -->
+        <div class="col-md-3">
+          <h2>Stats & Records</h2>
+          <p>
+            See the historical stats of the league. You can also see the various
+            records that we have over the years. It also includes every matchup
+            from the league.
+          </p>
+          <p>
+            <a class="btn btn-default" href="./stats/index.html"
+              >Learn more &raquo;</a
+            >
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h2>Draft</h2>
+          <p>
+            Go back and see the results from our previous in person live drafts.
+            It also includes the picks and elligible keepers for the upcoming
+            draft.
+          </p>
+          <p>
+            <a class="btn btn-default" href="./stats/index.html"
+              >Learn more &raquo;</a
+            >
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h2>Trades</h2>
+          <p>
+            Here is a list of some the trades that have happened in our league.
+            Most importantly, it keeps track of the multi-year trades.
+          </p>
+          <p>
+            <a class="btn btn-default" href="./trades/index.html"
+              >Learn more &raquo;</a
+            >
+          </p>
+        </div>
+        >
+        <div class="col-md-3">
+          <h2>Memories</h2>
+          <p>
+            Go see some photos from our previous in person drafts and other
+            memories that are easier to find here than on the Group Chat.
+          </p>
+          <p>
+            <a class="btn btn-default" href="./memories/index.html"
+              >Learn more &raquo;</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <hr />
+      <!-- Here we have our footer, with the copyright symbol and a span item with an ID so that we can autopopulate it with the current year. -->
+      <footer>
+        <p>
+          &copy;
+          <span id="currentYear"></span> - DKE Fantasy Football
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script>
+      // Here is the code that gets the current Date
+      var now = new Date();
+      // Next we get the full year value and make the html item with the ID currentYear have the text of the Current Year.
+      $("#currentYear").text(now.getFullYear());
+      var x = setInterval(function () {
+        var now = new Date();
+        $("#currentYear").text(now.getFullYear());
+      }, 1000);
+    </script>
+  </body>
+</html>
