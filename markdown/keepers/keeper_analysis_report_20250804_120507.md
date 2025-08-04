@@ -619,7 +619,7 @@ Ineligible keepers: 0
 
 🏈 OPTIMAL 3-KEEPER SELECTIONS BY TEAM:
 
-BASIL - OPTIMAL KEEPERS:
+### BASIL - OPTIMAL KEEPERS:
 
 --------------------------------------------------
 
@@ -715,7 +715,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 168.7
 - Average Round: 9.9
 - Total Players: 15
-- CHAZ - OPTIMAL KEEPERS:
+
+### CHAZ - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE De'Von Achane (RB)
@@ -792,7 +793,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 140.0
 - Average Round: 7.6
 - Total Players: 13
-- EAN - OPTIMAL KEEPERS:
+
+### EAN - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE Christian McCaffrey (RB)
@@ -879,7 +881,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 111.1
 - Average Round: 7.0
 - Total Players: 15
-- HUNTER - OPTIMAL KEEPERS:
+
+### HUNTER - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### ⭐ GREAT Marvin Harrison Jr. (WR)
@@ -965,7 +968,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 132.0
 - Average Round: 8.5
 - Total Players: 15
-- JARED - OPTIMAL KEEPERS:
+
+### JARED - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### ⭐ GREAT Jared Goff (QB)
@@ -1048,7 +1052,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 148.6
 - Average Round: 7.6
 - Total Players: 14
-- MAJORS - OPTIMAL KEEPERS:
+
+### MAJORS - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### ⚠️ FAIR Chris Godwin (WR)
@@ -1127,7 +1132,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 130.5
 - Average Round: 7.3
 - Total Players: 13
-- MATT - OPTIMAL KEEPERS:
+
+### MATT - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE Garrett Wilson (WR)
@@ -1215,7 +1221,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 138.7
 - Average Round: 6.9
 - Total Players: 15
-- ROSS - OPTIMAL KEEPERS:
+
+### ROSS - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### ⭐ GREAT Jordan Mason (RB)
@@ -1304,7 +1311,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 138.8
 - Average Round: 8.8
 - Total Players: 15
-- SAM - OPTIMAL KEEPERS:
+
+### SAM - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE Puka Nacua (WR)
@@ -1393,7 +1401,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 97.9
 - Average Round: 7.4
 - Total Players: 15
-- SAWYER - OPTIMAL KEEPERS:
+
+### SAWYER - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE Kyren Williams (RB)
@@ -1476,7 +1485,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 118.9
 - Average Round: 7.2
 - Total Players: 14
-- TREVOR - OPTIMAL KEEPERS:
+
+### TREVOR - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### 🔥 ELITE Bucky Irving (RB)
@@ -1564,7 +1574,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 98.1
 - Average Round: 7.6
 - Total Players: 15
-- WILLIS - OPTIMAL KEEPERS:
+
+### WILLIS - OPTIMAL KEEPERS:
 - --------------------------------------------------
 
 ### ⭐ GREAT Sam LaPorta (TE)
@@ -1653,7 +1664,8 @@ BASIL - OPTIMAL KEEPERS:
 - Average Ranking: 120.1
 - Average Round: 7.5
 - Total Players: 15
-- 🏆 LEAGUE-WIDE KEEPER LANDSCAPE:
+
+### 🏆 LEAGUE-WIDE KEEPER LANDSCAPE:
 
 🔥 TOP 10 OVERALL KEEPER VALUES:
 
@@ -1682,23 +1694,24 @@ BASIL - OPTIMAL KEEPERS:
 🎯 POSITION BREAKDOWN:
 
 - --------------------------------------------------
-- QB - Top 3 by ranking:
+QB - Top 3 by ranking:
 - • Josh Allen - Rank #25.0 (Round 1, Sam)
 - • Lamar Jackson - Rank #26.0 (Round 2, Trevor)
 - • Jayden Daniels - Rank #31.0 (Round 8, Hunter)
-- RB - Top 3 by ranking:
+RB - Top 3 by ranking:
 - • Bijan Robinson - Rank #2.0 (Round 1, Matt)
 - • Saquon Barkley - Rank #3.0 (Round 1, Jared)
 - • Jahmyr Gibbs - Rank #5.0 (Round 1, Ean)
-- WR - Top 3 by ranking:
+WR - Top 3 by ranking:
 - • Justin Jefferson - Rank #4.0 (Round 1, Sam)
 - • CeeDee Lamb - Rank #6.0 (Round 1, Ross)
 - • Puka Nacua - Rank #7.0 (Round 10, Sam)
-- TE - Top 3 by ranking:
+TE - Top 3 by ranking:
 - • Brock Bowers - Rank #17.0 (Round 6, Chaz)
 - • Trey McBride - Rank #23.0 (Round 3, Hunter)
 - • George Kittle - Rank #33.0 (Round 4, Jared)
-- 📊 TEAM STRENGTH RANKINGS (Based on All Eligible Keepers):
+
+### 📊 TEAM STRENGTH RANKINGS (Based on All Eligible Keepers):
 - --------------------------------------------------
 
 ### 🔥 ELITE Sam: 97.9 avg ranking, 137.0 total value
