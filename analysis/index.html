@@ -4,30 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title of the page that appears in the tab -->
-    <title>DKE Fantasy Football</title>
+    <title>Analysis - DKE Fantasy Football</title>
 
     <!-- Sewanee S that appears in the tab header -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./images/apple-touch-icon.png"
+      href="../images/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="../images/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon-16x16.png"
+      href="../images/favicon-16x16.png"
     />
-    <link rel="manifest" href="./images/manifest.json" />
+    <link rel="manifest" href="../images/manifest.json" />
     <link
       rel="mask-icon"
-      href="./images/safari-pinned-tab.svg"
+      href="../images/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="theme-color" content="#ffffff" />
@@ -67,7 +67,7 @@
       type="text/css"
       href="https://bootswatch.com/3/flatly/bootstrap.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
   </head>
 
   <body>
@@ -87,28 +87,28 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Title of the application where when clicked goes to the home page -->
-          <a href="./index.html" class="navbar-brand">DKE Fantasy Football</a>
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
         </div>
         <!-- All of the navbar items go here, this is what will collapse in the mobile view and appear in the menu button -->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../stats/index.html">Stats</a>
+            </li>
+            <li>
+              <a href="../draft/index.html">Draft Results</a>
+            </li>
+            <li>
+              <a href="../trades/index.html">Trades</a>
+            </li>
+            <li>
+              <a href="../memories/index.html">Memories</a>
+            </li>
             <li class="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="./stats/index.html">Stats</a>
-            </li>
-            <li>
-              <a href="./draft/index.html">Draft Results</a>
-            </li>
-            <li>
-              <a href="./trades/index.html">Trades</a>
-            </li>
-            <li>
-              <a href="./memories/index.html">Memories</a>
-            </li>
-            <li>
-              <a href="./analysis/index.html">Analysis</a>
+              <a href="#">Analysis</a>
             </li>
           </ul>
         </div>
@@ -120,10 +120,9 @@
     <!-- This is taken straight from https://getbootstrap.com/docs/3.3/components/#jumbotron -->
     <div class="jumbotron">
       <div class="container">
-        <h1>DKE Fantasy Football</h1>
+        <h1>Fantasy Football Analysis</h1>
         <p class="lead">
-          Welcome to the website for the greatest fantasy football league that
-          there ever was.
+          Deep dives into fantasy football strategy, keeper analysis, and league insights.
         </p>
         <br />
       </div>
@@ -131,71 +130,58 @@
 
     <!-- Body content -->
     <div class="container body-content">
-      <!-- This is how bootstraps grid system works. Check out this for more information, https://getbootstrap.com/docs/3.3/css/#grid -->
-      <!-- Essentially the grid system helps to lay out items on the page, and it is broken down into rows and columns, where each row is 12 columns wide. -->
+      <!-- Blog posts listing -->
       <div class="row">
-        <!-- Example of a column that is a third of the page for anything bigger than a tablet view. -->
-        <div class="col-md-2">
-          <h2>Stats & Records</h2>
-          <p>
-            See the historical stats of the league. You can also see the various
-            records that we have over the years. It also includes every matchup
-            from the league.
-          </p>
-          <p>
-            <a class="btn btn-default" href="./stats/index.html"
-              >Learn more &raquo;</a
-            >
-          </p>
-        </div>
-        <div class="col-md-2">
-          <h2>Draft</h2>
-          <p>
-            Go back and see the results from our previous in person live drafts.
-            It also includes the picks and elligible keepers for the upcoming
-            draft.
-          </p>
-          <p>
-            <a class="btn btn-default" href="./stats/index.html"
-              >Learn more &raquo;</a
-            >
-          </p>
-        </div>
-        <div class="col-md-2">
-          <h2>Trades</h2>
-          <p>
-            Here is a list of some the trades that have happened in our league.
-            Most importantly, it keeps track of the multi-year trades.
-          </p>
-          <p>
-            <a class="btn btn-default" href="./trades/index.html"
-              >Learn more &raquo;</a
-            >
-          </p>
-        </div>
-        <div class="col-md-3">
-          <h2>Memories</h2>
-          <p>
-            Go see some photos from our previous in person drafts and other
-            memories that are easier to find here than on the Group Chat.
-          </p>
-          <p>
-            <a class="btn btn-default" href="./memories/index.html"
-              >Learn more &raquo;</a
-            >
-          </p>
-        </div>
-        <div class="col-md-3">
-          <h2>Analysis</h2>
-          <p>
-            Deep dives into fantasy football strategy, keeper analysis, and league insights.
-            Read detailed analysis reports and strategic recommendations.
-          </p>
-          <p>
-            <a class="btn btn-default" href="./analysis/index.html"
-              >Learn more &raquo;</a
-            >
-          </p>
+        <div class="col-md-12">
+          <h2>Latest Analysis Posts</h2>
+          <hr />
+          
+          <!-- Blog post entry -->
+          <div class="blog-post">
+            <h3>
+              <a href="keeper-analysis-2025.html">Fantasy Football Keeper Analysis Report - 2025</a>
+            </h3>
+            <p class="text-muted">
+              <small>
+                <span class="glyphicon glyphicon-calendar"></span> August 4, 2025
+                <span class="glyphicon glyphicon-user"></span> League Analysis
+              </small>
+            </p>
+            <p>
+              A comprehensive analysis of the fantasy football keeper landscape for the 2025 season. 
+              This report includes detailed keeper value analysis, team-specific strategies, and 
+              optimal keeper selections for all 12 teams in the league.
+            </p>
+            <p>
+              <strong>Key Highlights:</strong>
+            </p>
+            <ul>
+              <li>Analysis of 174 total players in the keeper pool</li>
+              <li>Top keeper values including Puka Nacua (Round 10, Rank #7) and Nico Collins (Round 10, Rank #9)</li>
+              <li>Team-by-team keeper recommendations and draft strategies</li>
+              <li>Position scarcity analysis and waiver wire gems</li>
+            </ul>
+            <p>
+              <a class="btn btn-primary" href="keeper-analysis-2025.html">Read Full Analysis &raquo;</a>
+            </p>
+          </div>
+          
+          <hr />
+          
+          <!-- Placeholder for future posts -->
+          <div class="blog-post">
+            <h3>More Analysis Coming Soon</h3>
+            <p class="text-muted">
+              <small>
+                <span class="glyphicon glyphicon-calendar"></span> Future Posts
+              </small>
+            </p>
+            <p>
+              Additional analysis posts will be added here as the season progresses. 
+              Topics will include draft strategy, trade analysis, waiver wire insights, 
+              and playoff predictions.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -210,7 +196,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
     <script>
       // Here is the code that gets the current Date
       var now = new Date();

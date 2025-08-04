@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page that appears in the tab -->
+    <title>Keeper Analysis Report 2025 - DKE Fantasy Football</title>
+
+    <!-- Sewanee S that appears in the tab header -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="../images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108694586-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108694586-1");
+    </script>
+
+    <!-- AdSense -->
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7783180728620328",
+        enable_page_level_ads: true,
+      });
+    </script>
+    <!-- End of AdSense -->
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bootswatch.com/3/flatly/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    
+    <!-- Marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    
+    <!-- Markdown viewer styles -->
+    <style>
+      .markdown-content {
+        line-height: 1.7;
+        font-size: 16px;
+        color: #333;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+      
+      .markdown-content h1 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 15px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        font-weight: 700;
+      }
+      
+      .markdown-content h2 {
+        color: #34495e;
+        border-bottom: 2px solid #bdc3c7;
+        padding-bottom: 10px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: 600;
+      }
+      
+      .markdown-content h3 {
+        color: #2c3e50;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      
+      .markdown-content h4 {
+        color: #34495e;
+        margin-top: 25px;
+        margin-bottom: 12px;
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      
+      .markdown-content p {
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+      
+      .markdown-content ul, .markdown-content ol {
+        margin-bottom: 20px;
+        padding-left: 30px;
+      }
+      
+      .markdown-content li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+      
+      .markdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 14px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .markdown-content th, .markdown-content td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: top;
+      }
+      
+      .markdown-content th {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+      
+      .markdown-content tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      
+      .markdown-content tr:hover {
+        background-color: #e3f2fd;
+        transition: background-color 0.2s ease;
+      }
+      
+      .markdown-content code {
+        background-color: #f8f9fa;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+        font-size: 0.9em;
+        color: #e74c3c;
+        border: 1px solid #e1e8ed;
+      }
+      
+      .markdown-content pre {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 20px 0;
+        font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
+      .markdown-content pre code {
+        background: none;
+        padding: 0;
+        border: none;
+        color: inherit;
+      }
+      
+      .markdown-content blockquote {
+        border-left: 5px solid #3498db;
+        padding: 15px 20px;
+        margin: 25px 0;
+        background-color: #f8f9fa;
+        border-radius: 0 8px 8px 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      .markdown-content hr {
+        border: none;
+        border-top: 3px solid #3498db;
+        margin: 40px 0;
+        border-radius: 2px;
+      }
+      
+      .markdown-content strong {
+        color: #2c3e50;
+        font-weight: 700;
+      }
+      
+      .markdown-content em {
+        color: #7f8c8d;
+        font-style: italic;
+      }
+      
+      .markdown-content a {
+        color: #3498db;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.2s ease;
+      }
+      
+      .markdown-content a:hover {
+        border-bottom: 1px solid #3498db;
+      }
+      
+      /* Special styling for data tables */
+      .markdown-content table.dataframe {
+        font-size: 13px;
+      }
+      
+      .markdown-content table.dataframe th {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        font-size: 12px;
+      }
+      
+      /* Responsive tables */
+      @media (max-width: 768px) {
+        .markdown-content table {
+          font-size: 12px;
+        }
+        
+        .markdown-content th, .markdown-content td {
+          padding: 8px 10px;
+        }
+        
+        .markdown-content {
+          font-size: 15px;
+        }
+      }
+      
+      .back-link {
+        margin-bottom: 20px;
+      }
+      
+      .post-meta {
+        color: #7f8c8d;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ecf0f1;
+      }
+      
+      .loading {
+        text-align: center;
+        padding: 40px;
+        color: #7f8c8d;
+      }
+      
+      .error {
+        color: #e74c3c;
+        padding: 20px;
+        background-color: #fdf2f2;
+        border: 1px solid #f5c6cb;
+        border-radius: 4px;
+        margin: 20px 0;
+      }
+      
+      /* Custom styling for specific content */
+      .markdown-content .highlight {
+        background-color: #fff3cd;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin: 20px 0;
+      }
+      
+      .markdown-content .info-box {
+        background-color: #d1ecf1;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #17a2b8;
+        margin: 20px 0;
+      }
+      
+      .markdown-content .warning-box {
+        background-color: #f8d7da;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #dc3545;
+        margin: 20px 0;
+      }
+      
+      /* Table of contents styling */
+      .markdown-content ol {
+        counter-reset: item;
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .markdown-content ol li {
+        counter-increment: item;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+      }
+      
+      .markdown-content ol li:before {
+        content: counter(item) ". ";
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-weight: bold;
+      }
+      
+      .markdown-content ol li a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      
+      .markdown-content ol li a:hover {
+        color: #3498db;
+        text-decoration: underline;
+      }
+      
+      /* Smooth scrolling for the entire page */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Active section highlighting */
+      .markdown-content h2:target,
+      .markdown-content h3:target {
+        background-color: #e3f2fd;
+        padding: 10px;
+        border-radius: 5px;
+        border-left: 4px solid #3498db;
+        margin-left: -10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar at the top of the page. All of this code is taken from https://getbootstrap.com/docs/3.3/components/#navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Menu Button that will appear in the mobile view -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Title of the application where when clicked goes to the home page -->
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <!-- All of the navbar items go here, this is what will collapse in the mobile view and appear in the menu button -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../stats/index.html">Stats</a>
+            </li>
+            <li>
+              <a href="../draft/index.html">Draft Results</a>
+            </li>
+            <li>
+              <a href="../trades/index.html">Trades</a>
+            </li>
+            <li>
+              <a href="../memories/index.html">Memories</a>
+            </li>
+            <li class="active">
+              <a href="#">Analysis</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End of the navbar items -->
+      </div>
+    </div>
+    <!-- End of the navbar -->
+
+    <!-- Body content -->
+    <div class="container body-content" style="margin-top: 80px;">
+      <!-- Back link -->
+      <div class="back-link">
+        <a href="index.html" class="btn btn-default">
+          <span class="glyphicon glyphicon-arrow-left"></span> Back to Analysis
+        </a>
+      </div>
+      
+      <!-- Post meta -->
+      <div class="post-meta">
+        <h1>Fantasy Football Keeper Analysis Report - 2025</h1>
+        <p>
+          <span class="glyphicon glyphicon-calendar"></span> August 4, 2025
+          <span class="glyphicon glyphicon-user"></span> League Analysis
+        </p>
+      </div>
+      
+      <!-- Markdown content -->
+      <div class="markdown-content" id="markdown-content">
+        <div class="loading">
+          <span class="glyphicon glyphicon-refresh" style="animation: spin 1s linear infinite;"></span>
+          Loading analysis report...
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script>
+      // Here is the code that gets the current Date
+      var now = new Date();
+      // Next we get the full year value and make the html item with the ID currentYear have the text of the Current Year.
+      $("#currentYear").text(now.getFullYear());
+      var x = setInterval(function () {
+        var now = new Date();
+        $("#currentYear").text(now.getFullYear());
+      }, 1000);
+      
+      // Load markdown content using Marked.js
+      $(document).ready(function() {
+        // Configure marked options
+        marked.setOptions({
+          breaks: true,
+          gfm: true,
+          tables: true,
+          headerIds: true,
+          mangle: false
+        });
+        
+        // Configure marked options with header IDs enabled
+        marked.setOptions({
+          breaks: true,
+          gfm: true,
+          tables: true,
+          headerIds: true,
+          mangle: false
+        });
+        
+        // Load the markdown file
+        fetch('../markdown/keepers/keeper_analysis_report_20250804_120507.md')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to load markdown file');
+            }
+            return response.text();
+          })
+          .then(markdown => {
+            // Clean up the markdown content
+            let cleanedMarkdown = cleanMarkdownContent(markdown);
+            
+            // Parse markdown to HTML using marked
+            const html = marked.parse(cleanedMarkdown);
+            $('#markdown-content').html(html);
+            
+            // Apply additional styling after content is loaded
+            applyAdditionalStyling();
+            
+            // Setup table of contents navigation
+            setupTableOfContents();
+          })
+          .catch(error => {
+            console.error('Error loading markdown file:', error);
+            $('#markdown-content').html(`
+              <div class="error">
+                <h3>Error Loading Content</h3>
+                <p>Unable to load the analysis report. Please try refreshing the page.</p>
+                <p><strong>Error:</strong> ${error.message}</p>
+              </div>
+            `);
+          });
+      });
+      
+      // Function to clean up markdown content
+      function cleanMarkdownContent(markdown) {
+        let cleaned = markdown;
+        
+        // Remove duplicate headers if they exist
+        cleaned = cleaned.replace(/## Basic Keeper Analysis\n\n## Basic Keeper Analysis/g, '## Basic Keeper Analysis');
+        
+        // Remove any pandas DataFrame artifacts that might still be present
+        cleaned = cleaned.replace(/Name: count, dtype: object\n/g, '');
+        cleaned = cleaned.replace(/Name: count, dtype: int64\n/g, '');
+        cleaned = cleaned.replace(/\[10 rows x 6 columns\]/g, '');
+        cleaned = cleaned.replace(/Name: count, dtype: int64/g, '');
+        
+        // Fix list formatting if needed
+        cleaned = cleaned.replace(/^\* (.*$)/gm, '- $1');
+        
+        // Remove any potential [object Object] strings
+        cleaned = cleaned.replace(/\[object Object\]/g, '');
+        
+        // Comprehensive table formatting fix
+        // First, let's fix the separator rows
+        cleaned = cleaned.replace(/\| ------- \|/g, '|-------|');
+        cleaned = cleaned.replace(/\| -------------- \|/g, '|-------------|');
+        cleaned = cleaned.replace(/\| ------------- \|/g, '|-------------|');
+        cleaned = cleaned.replace(/\| ----------- \|/g, '|-----------|');
+        cleaned = cleaned.replace(/\| --- \|/g, '|---|');
+        
+        // Fix tables by adding proper line breaks
+        // Pattern: header row followed by separator row
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|)\s*(\|-------\|)/g, '$1\n$2');
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)\s*(\|-------\|)/g, '$1\n$2');
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)\s*(\|-------\|)/g, '$1\n$2');
+        
+        // Pattern: separator row followed by data row
+        cleaned = cleaned.replace(/(\|-------\|)\s*(\|[^|]*\|)/g, '$1\n$2');
+        
+        // Pattern: data row followed by another data row (add line breaks)
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|)\s*(\|[^|]*\|[^|]*\|)/g, '$1\n$2');
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)\s*(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)/g, '$1\n$2');
+        cleaned = cleaned.replace(/(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)\s*(\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|)/g, '$1\n$2');
+        
+        // Ensure proper spacing in table cells
+        cleaned = cleaned.replace(/\|\s*([^|]+)\s*\|/g, '| $1 |');
+        
+        // Fix table of contents anchor links to match header IDs
+        cleaned = cleaned.replace(/\[Basic Keeper Analysis\]\(#basic-keeper-analysis\)/g, '[Basic Keeper Analysis](#basic-keeper-analysis)');
+        cleaned = cleaned.replace(/\[Key Keeper Insights\]\(#key-keeper-insights\)/g, '[Key Keeper Insights](#key-keeper-insights)');
+        cleaned = cleaned.replace(/\[Keeper Rules Analysis\]\(#keeper-rules-analysis\)/g, '[Keeper Rules Analysis](#keeper-rules-analysis)');
+        cleaned = cleaned.replace(/\[Optimal Keeper Selections\]\(#optimal-keeper-selections\)/g, '[Optimal Keeper Selections](#optimal-keeper-selections)');
+        cleaned = cleaned.replace(/\[Team-Specific Keeper Analysis & Draft Strategy\]\(#team-specific-keeper-analysis--draft-strategy\)/g, '[Team-Specific Keeper Analysis & Draft Strategy](#team-specific-keeper-analysis--draft-strategy)');
+        cleaned = cleaned.replace(/\[Fantasy Football Draft Strategy Guide\]\(#fantasy-football-draft-strategy-guide\)/g, '[Fantasy Football Draft Strategy Guide](#fantasy-football-draft-strategy-guide)');
+        
+        return cleaned;
+      }
+      
+      // Function to apply additional styling after content is loaded
+      function applyAdditionalStyling() {
+        // Add classes to tables for better styling
+        $('.markdown-content table').addClass('table table-striped table-bordered');
+        
+        // Add responsive wrapper to tables
+        $('.markdown-content table').wrap('<div class="table-responsive"></div>');
+        
+        // Add Bootstrap classes to code blocks
+        $('.markdown-content pre').addClass('bg-dark text-light');
+        
+        // Add styling to specific sections
+        $('.markdown-content h2:contains("Key Keeper Insights")').nextUntil('h2').wrapAll('<div class="highlight"></div>');
+        $('.markdown-content h2:contains("Executive Summary")').nextUntil('hr').wrapAll('<div class="info-box"></div>');
+      }
+
+      // Function to setup table of contents navigation
+      function setupTableOfContents() {
+        const toc = document.getElementById('toc');
+        if (!toc) {
+          return;
+        }
+
+        const headings = toc.querySelectorAll('li');
+        let currentHeading = null;
+
+        headings.forEach(heading => {
+          const link = heading.querySelector('a');
+          if (link) {
+            const targetId = link.getAttribute('href').substring(1); // Remove # from href
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              heading.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetOffset = targetElement.offsetTop;
+                const headerOffset = 80; // Adjust for fixed navbar height
+                const offsetPosition = targetOffset - headerOffset;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              });
+            }
+          }
+        });
+      }
+    </script>
+    
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </body>
+</html> 
