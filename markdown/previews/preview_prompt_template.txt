@@ -1,0 +1,51 @@
+### Updated reusable prompt for weekly previews (with extra trash talk)
+
+Copy/paste and fill the brackets weekly.
+
+Write a markdown “Week [WEEK_NUMBER] [YEAR] Preview” for the DKE Fantasy Football league.
+
+Data source rules:
+- Use historical results from scripts/everygame.js for head-to-head totals and averages.
+- If no history for a pair: say “First-ever meeting” and omit averages.
+
+Per-matchup output:
+- Section header: “### [TEAM A] vs [TEAM B]”
+- Head-to-Head: “[Leader] leads X–Y (N games)” (or “Tied X–X (N games)”)
+- Avg Points: “[TEAM A] [A_PPG] — [TEAM B] [B_PPG]” (round to 2 decimals; skip if no history)
+- Vibe Check: 2–3 sentences using series trends (blowouts, close games, scoring styles, recent tone if visible).
+- Spice It Up: 1 punchy trash-talk line (clever/snarky but not personal; fun rivalry energy).
+- Bold Call: One specific prediction and “Edge: [TEAM]”.
+
+Global output structure (GitHub-flavored markdown only):
+- Title: “# [YEAR] Week [WEEK_NUMBER] Preview”
+- “Generated on:” line
+- “## Matchups” followed by one section per matchup (in given order)
+- “## Notes and Nuggets” with 2–3 bullets (explain averages are head-to-head per-game; source is everygame.js; trash talk is in good fun)
+- “## Bookmark This Week’s Storylines” with 4–6 bullets on interesting angles
+- No HTML, no extra commentary.
+
+Inputs this week:
+- Week: [WEEK_NUMBER], Year: [YEAR]
+- Matchups (exact order):
+  1) [TEAM_A1] vs [TEAM_B1]
+  2) [TEAM_A2] vs [TEAM_B2]
+  3) [TEAM_A3] vs [TEAM_B3]
+  4) [TEAM_A4] vs [TEAM_B4]
+  5) [TEAM_A5] vs [TEAM_B5]
+  6) [TEAM_A6] vs [TEAM_B6]
+
+Style constraints:
+- Round averages to 2 decimals.
+- Keep “Vibe Check” informative; keep “Spice It Up” witty/short (1 sentence).
+- Keep “Bold Call” concrete (specific point margin, player archetype, or scoring tier).
+- Maintain consistent tone across all matchups.
+
+File naming and publish steps:
+- Save as markdown/previews/week[WEEK_NUMBER]-[YEAR].md
+- Render at analysis/week[WEEK_NUMBER]-[YEAR].html (copy structure of analysis/week6-2025.html; update fetch path)
+- Link from analysis/index.html under “Latest Analysis Posts” with title “Week [WEEK_NUMBER] Preview - [YEAR]”.
+
+Example “Spice It Up” tone guides:
+- “[TEAM A] drafts like a CPA and still brings receipts.”
+- “[TEAM B] is a rooftop party; [TEAM A] is the HOA email.”
+- “Bring sunscreen — regression’s about to shine.”
