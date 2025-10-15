@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7 Preview - DKE Fantasy Football</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/flatly/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <style>
+      .markdown-content { line-height: 1.7; font-size: 16px; color: #333; max-width: 100%; overflow-x: auto; }
+      .markdown-content h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-top: 40px; margin-bottom: 30px; font-size: 2.2em; font-weight: 700; }
+      .markdown-content h2 { color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; margin-top: 35px; margin-bottom: 20px; font-size: 1.8em; font-weight: 600; }
+      .markdown-content h3 { color: #2c3e50; margin-top: 30px; margin-bottom: 15px; font-size: 1.4em; font-weight: 600; }
+      .markdown-content p { margin-bottom: 18px; }
+      .markdown-content table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+      .markdown-content th, .markdown-content td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+      .markdown-content th { background: #f8f9fa; font-weight: 600; }
+      .back-link { margin-top: 80px; margin-bottom: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../index.html" class="navbar-brand">DKE Fantasy Football</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../stats/index.html">Stats</a></li>
+            <li><a href="../draft/index.html">Draft Results</a></li>
+            <li><a href="../trades/index.html">Trades</a></li>
+            <li><a href="../memories/index.html">Memories</a></li>
+            <li class="active"><a href="#">Analysis</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container body-content">
+      <div class="back-link">
+        <a href="index.html" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> Back to Analysis</a>
+      </div>
+      <div class="markdown-content" id="markdown-content">
+        <div class="loading">Loading Week 7 Preview...</div>
+      </div>
+      <hr />
+      <footer>
+        <p>&copy; <span id="currentYear"></span> - DKE Fantasy Football</p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        marked.setOptions({ gfm:true, tables:true, breaks:true, headerIds:true, mangle:false });
+        fetch('../markdown/previews/week7-2025.md')
+          .then(r=>{ if(!r.ok) throw new Error('Failed to load preview'); return r.text(); })
+          .then(md=>{ $('#markdown-content').html(marked.parse(md)); })
+          .catch(err=>{ $('#markdown-content').html('<div class=\'alert alert-danger\'>'+err.message+'</div>'); });
+        var now=new Date(); $('#currentYear').text(now.getFullYear());
+      });
+    </script>
+  </body>
+</html>
