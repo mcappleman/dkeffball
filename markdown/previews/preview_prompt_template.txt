@@ -6,6 +6,7 @@ Write a markdown “Week [WEEK_NUMBER] [YEAR] Preview” for the DKE Fantasy Foo
 
 Data source rules:
 - Use historical results from scripts/everygame.js for head-to-head totals and averages.
+- Use this seasons results for predictions from scripts/stats2025.js
 - If no history for a pair: say “First-ever meeting” and omit averages.
 
 Per-matchup output:
