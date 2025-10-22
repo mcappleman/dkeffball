@@ -11,7 +11,7 @@ Data source rules:
 
 Historical data format (provide for each matchup):
 ```
-[TEAM_B] vs [TEAM_A]
+[TEAM_A] vs [TEAM_B]
 [TEAM_B]	[GAMES_PLAYED]	[TEAM_A_WINS]	[TEAM_B_WINS]	[TIES]	[TEAM_A_TOTAL_POINTS]	[TEAM_B_TOTAL_POINTS]	[AVG_POINT_DIFF]	[AVG_COMBINED_POINTS]	[TEAM_A_AVG_PPG]	[TEAM_B_AVG_PPG]
 ```
 
