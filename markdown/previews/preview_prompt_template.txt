@@ -5,9 +5,21 @@ Copy/paste and fill the brackets weekly.
 Write a markdown “Week [WEEK_NUMBER] [YEAR] Preview” for the DKE Fantasy Football league.
 
 Data source rules:
-- Use historical results from scripts/everygame.js for head-to-head totals and averages.
+- Use manually provided historical results for head-to-head totals and averages (see format below).
 - Use this seasons results for predictions from scripts/stats2025.js
-- If no history for a pair: say “First-ever meeting” and omit averages.
+- If no history for a pair: say "First-ever meeting" and omit averages.
+
+Historical data format (provide for each matchup):
+```
+[TEAM_B] vs [TEAM_A]
+[TEAM_B]	[GAMES_PLAYED]	[TEAM_A_WINS]	[TEAM_B_WINS]	[TIES]	[TEAM_A_TOTAL_POINTS]	[TEAM_B_TOTAL_POINTS]	[AVG_POINT_DIFF]	[AVG_COMBINED_POINTS]	[TEAM_A_AVG_PPG]	[TEAM_B_AVG_PPG]
+```
+
+Example:
+```
+Basil vs Sam
+Sam	15	8	7	0	1386.58	1456.3	20.92	189.53	92.44	97.09
+```
 
 Per-matchup output:
 - Section header: “### [TEAM A] vs [TEAM B]”
